@@ -80,7 +80,8 @@ resource "aws_security_group" "capstone_sg" {
 
 resource "aws_ecr_repository" "capstone_repo" {
   name = "my-webpage"
-
+  force_delete = true
+  
   tags = {
     name = "capstone_ecr"
   }
